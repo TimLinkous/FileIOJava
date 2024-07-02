@@ -14,11 +14,12 @@ public class ReadFour
         {
             try {
                 Scanner fileIn = new Scanner(new File("Step4/input.txt"));
-
+                int total = 0;
                 while (fileIn.hasNext()){
+
                     String lineIn = fileIn.nextLine();
-                    String[] input = lineIn.split("");
-                    int total = 0;
+                    String[] input = lineIn.split("\n");
+
                     for (int i = 0; i< input.length; i++) {
                         total += Integer.parseInt(input[i]);
                     }
